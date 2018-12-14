@@ -1,0 +1,96 @@
+@mixin inline-block(){
+    display:inline-block;zoom:1;*display:inline;
+}
+
+@mixin txtHidden(){
+    overflow:hidden;
+    display:inline-block;*display:inline; zoom:1;
+    text-indent:-9999px; white-space:nowrap; line-height:0;
+}
+
+
+@mixin txtHide(){
+    position:fixed;width:0;height:0;display:block;font-size:0;line-height:0;overflow:hidden;opacity: 0;
+}
+
+//...한줄처리
+@mixin ellipsis(){
+    overflow:hidden; white-space:nowrap !important;
+    text-overflow:ellipsis; -o-text-overflow:ellipsis; word-wrap:normal !important;
+}
+// 말주림 2줄
+@mixin ellipsis_multi($textLine:2,$lineHeight:1.6em) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-line-clamp: $textLine;
+    -webkit-box-orient: vertical;
+    word-wrap:break-word;
+    line-height:$lineHeight;
+    max-height: ($lineHeight * $textLine);
+    text-align:left;
+    display:-webkit-box !important;
+}
+
+//clear처리
+@mixin clearFix(){
+    clear:both;
+    &:before,&:after {content:" "; display:table;}
+    &:after {clear:both;}
+}
+
+@mixin before-middle(){
+    &:before {
+        content:"";
+        display:inline-block;
+        height:100%;
+        vertical-align: middle;
+    }
+}
+
+
+.clearFix {
+    @include clearFix();
+}
+
+
+.icon {
+    position:relative;
+    overflow:hidden;
+    display:inline-block;*display:inline; zoom:1;
+    text-indent:-9999px; white-space:nowrap; line-height:0;
+    vertical-align:middle;
+}
+
+.txtHidden {@include txtHidden()}
+.txtHide {@include txtHide()}
+
+@mixin font($weight:"regular"){
+    @if($weight == "thin") {
+        font-family:"notokr-thin";
+    }
+    @if($weight == "light") {
+        font-family:"notokr-light"
+    }
+    @if($weight == "dLight") {
+        font-family:"notokr-demilight"
+    }
+    @if($weight == "bold") {
+        font-family:"notokr-bold"
+    }
+    @if($weight == "black") {
+        font-family:"notokr-black"
+    }
+    @if($weight == "regular") {
+        font-family:"notokr-regular"
+    }
+    @if($weight == "medium") {
+        font-family:"notokr-medium"
+    }
+    font-weight:normal;
+}
+
+
+//color
+
+$cBlue:#206ed7;

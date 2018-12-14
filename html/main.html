@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel = "stylesheet" href = "css / selectordie.css"/>
+    <title>[이현주]WEB_Study</title>
+    <meta name="description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="이현주">
+    <meta property="og:url" content="n.com">
+    <meta property="og:site_name" content="web_study">
+    <meta property="og:description" content="bem&jquery&etc...">
+    <meta property="og:image" content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/js/jquery.bxslider.min.js"></script>
+    <script src="/js/selectordie.js"></script>
+</head>
+<body>
+
+<section id="hyunju">
+    <div class="hyunju">
+        <div class="hyunju__bg">
+            <nav class="hyunju__gnb">
+                <a href="#this">home</a>
+                <a href="#this">home</a>
+                <a href="#this">home</a>
+                <a href="#this">home</a>
+            </nav>
+            <h3 class="hyunju__title">안녕하세요</h3>
+            <select>
+                <option value="one"> One </option>
+                <option value="two"> Two </option>
+                <option value="three"> Three </option>
+                <optgroup label="Option Group Label">
+                    <option value="group.one"> Option Group.One </option>
+                    <option value="group.two"> Option Group.Two </option>
+                </optgroup>
+                <option value= "four"> Four </option>
+                <option value="five"> Five </option>
+            </select>
+        </div>
+    </div>
+</section>
+</body>
+<script>
+    $(document).ready(function () {
+        $('select').selectOrDie();
+    });
+</script>
+</html>
