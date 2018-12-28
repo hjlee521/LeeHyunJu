@@ -7,7 +7,17 @@ blockquote, q {quotes: none}
 blockquote:before, blockquote:after,q:before, q:after {content:'';}
 input,select,textarea,button {vertical-align:middle}
 button {border:0 none;background-color:transparent;cursor:pointer}
-body {background:#fff}
+body {
+    background:#fff;
+}
+@font-face {
+    font-family: 'sdmisaeng';
+    src: local('sdmisaeng'),
+    url('/fonts/sdmisaeng.woff2') format('woff2'),
+    url('/fonts/sdmisaeng.woff') format('woff'),
+    url('/fonts/sdmisaeng.ttf') format('truetype'),
+    url('/fonts/sdmisaeng.eot') format('embedded-opentype');
+}
 body,th,td,input,select,textarea,button {font-family: 'notokr-regular',"sans-serif";color:#313131} /* color값은 디자인가이드에 맞게사용 */
 a {color:#313131;text-decoration:none}
 i {font-style:normal}
