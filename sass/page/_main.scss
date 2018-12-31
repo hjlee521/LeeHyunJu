@@ -18,8 +18,8 @@
             top: 120px;
             width: 130px;
             right: 70px;
-            background: #f7f7f7;
-            border-bottom: 1px solid #efefef;
+            background: rgba(#fff,0.8);
+            z-index: 100;
             &--list {
                 font-size: 14px;
                 text-transform: uppercase;
@@ -33,11 +33,11 @@
             }
         }
         &__main {
-            background: url("/images/img_main.png") no-repeat;
-            background-size: contain;
+            background: url("/images/bg_main.jpg") no-repeat;
+            background-size: cover;
             background-color: #fff;
             background-position: right;
-            height: 700px;
+            height: 100vh;
         }
         &__titBox {
             padding-top: 350px;
@@ -56,6 +56,9 @@
                 background: #D10000;
                 color: #ffffff;
             }
+            .name {
+                font-weight: 700;
+            }
         }
         &__title {
             font-size: 44px;
@@ -66,6 +69,10 @@
             font-size: 25px;
             font-weight: 300;
             color: #5f5b5a;
+            &.-addTxt {
+                margin-top: 36px;
+                font-size: 18px;
+            }
         }
 
         &__about {
@@ -74,26 +81,48 @@
             margin-bottom: 60px;
             &--left {
                 display: inline-block;
+                width: 100%;
             }
             &Box {
-                &.-left {
-                    background: #f6f7f9;
-                    padding: 70px 60px;
-                    display: inline-block;
-                }
-                &.-right {
-                    display: inline-block;
-                }
+                background: #f6f7f9;
+                padding: 70px 60px;
+                overflow: hidden;
+                height: 520px;
+                box-sizing: border-box;
                 &--tit {
                     font-size: 26px;
                     color: #44494d;
-                    margin-bottom: 46px;
                 }
                 &--txt {
                     margin-bottom: 27px;
+                    padding: 10px;
                     font-size: 14px;
                     color: #55584f;
                     line-height: 25px;
+                    vertical-align: top;
+                }
+                &--txts {
+                    padding: 10px 10px 0 10px;
+                    font-size: 14px;
+                    color: #55584f;
+                    line-height: 25px;
+                    vertical-align: top;
+                }
+                &--left {
+                    float: left;
+                    width: 50%;
+                    margin-top: 45px;
+                }
+                &--right {
+                    float: right;
+                    width: 50%;
+                    text-align: center;
+                    margin-top: 15px;
+                    .profile {
+                        border-radius: 50%;
+                        width: 320px;
+                        border: 5px solid #fff;
+                    }
                 }
             }
         }
@@ -174,16 +203,25 @@
                 color: #fff;
                 font-size: 12px;
                 line-height: 2;
-                &.-line {
-                    &:after {
-                        content: '';
-                        display: inline-block;
-                        background: #fff;
-                        width: 1px;
-                        height: 10px;
-                        margin: auto 10px;
-                    }
-                }
+            }
+        }
+        &__contact {
+            background: #fff;
+            padding: 60px 0;
+            &--txt {
+                font-size: 14px;
+                color: #55584f;
+                line-height: 25px;
+            }
+        }
+        &__skill {
+            background: #f6f7f9;
+            padding: 60px 0;
+            &--list {
+                display: inline-block;
+                vertical-align: top;
+                width: 33%;
+                text-align: center;
             }
         }
     }
