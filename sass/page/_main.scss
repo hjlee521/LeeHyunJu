@@ -6,6 +6,9 @@
             background: #ff6570;
             color: #fff;
         }
+        * {
+          cursor: url("/images/icon_clude.png");
+        }
         &__wrap {
             width: 1100px;
             margin: 0 auto;
@@ -18,8 +21,17 @@
             top: 120px;
             width: 130px;
             right: 70px;
-            background: rgba(#fff,0.8);
             z-index: 100;
+            &--logo {
+                img {
+                    width: 90px;
+                    margin-left: 19px;
+                    margin-bottom: 14px;
+                }
+            }
+            &--box {
+                background: rgba(#fff,0.8);
+            }
             &--list {
                 font-size: 14px;
                 text-transform: uppercase;
@@ -33,11 +45,9 @@
             }
         }
         &__main {
-            background: url("/images/bg_main.jpg") no-repeat;
+            background: url("/images/bg_main.jpg") no-repeat fixed center center;
             background-size: cover;
-            background-color: #fff;
-            background-position: right;
-            height: 100vh;
+            height: 800px;
         }
         &__titBox {
             padding-top: 350px;
@@ -47,11 +57,8 @@
         &__title {
             font-size: 50px;
             font-weight: 700;
-            position: relative;
             display: block;
             color: #fff;
-            -webkit-background-clip: text;
-            white-space: nowrap;
             ::selection {
                 background: #D10000;
                 color: #ffffff;
@@ -100,6 +107,9 @@
                     color: #55584f;
                     line-height: 25px;
                     vertical-align: top;
+                    &.-tit {
+                        font-weight: 700;
+                    }
                 }
                 &--txts {
                     padding: 10px 10px 0 10px;
@@ -226,3 +236,14 @@
         }
     }
 
+// TOP버튼
+.up {
+    background: url('/images/icon_top.png') no-repeat;
+    cursor: pointer;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 3;
+    width: 58px;
+    height: 38px;
+}

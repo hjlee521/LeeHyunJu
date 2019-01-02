@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <link href="/images/SmallLogo.ico" rel="shortcut icon">
+    <meta name="viewport" content="width=divice-width,initial-scale=1,user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel = "stylesheet" href = "css / selectordie.css"/>
@@ -17,23 +19,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="/js/jquery.bxslider.min.js"></script>
     <script src="/js/selectordie.js"></script>
+    <script src="/js/index.js"></script>
 </head>
 <body>
 
     <div class="hyunju">
         <!--메인부분-->
         <nav class="hyunju__gnb">
-            <a href="#this" class="hyunju__gnb--list">HOME</a>
-            <a href="#this" class="hyunju__gnb--list">ABOUT</a>
-            <a href="#this" class="hyunju__gnb--list">PORTFOLIO</a>
-            <a href="#this" class="hyunju__gnb--list">SKILL</a>
-            <a href="#this" class="hyunju__gnb--list">CONTACT</a>
+            <a href="/html/main.html" class="hyunju__gnb--logo"><img src="/images/my_logo.png" alt=""></a>
+            <div class="hyunju__gnb--box">
+                <a href="/html/main.html#sec1" class="hyunju__gnb--list">ABOUT</a>
+                <a href="/html/main.html#sec2" class="hyunju__gnb--list">WORKS</a>
+                <a href="/html/main.html#sec3" class="hyunju__gnb--list">SKILL</a>
+                <a href="/html/main.html#sec4" class="hyunju__gnb--list">CONTACT</a>
+            </div>
         </nav>
 
-        <div class="hyunju__bg">
+        <div class="hyunju__bg" id="vis">
             <div class="hyunju__main">
                 <div class="hyunju__titBox">
-
                     <h3 class="hyunju__desc">
                         <span>UI/UX</span><span> &amp; </span><span>Front-End</span><span> Developer</span>
                     </h3>
@@ -48,7 +52,7 @@
             </div>
         </div>
 
-        <div class="hyunju__about">
+        <div class="hyunju__about" id="sec1">
             <div class="hyunju__wrap">
                 <div class="hyunju__about--left">
                     <div class="titBox">
@@ -57,34 +61,32 @@
                     </div>
 
                     <div class="hyunju__aboutBox">
-                        <h3 class="hyunju__aboutBox--tit">Webサイトをより良くし続けるために。</h3>
+                        <h3 class="hyunju__aboutBox--tit">Profile</h3>
 
                         <table class="hyunju__aboutBox--left">
                             <tr>
-                                <td class="hyunju__aboutBox--txt">이름</td>
-                                <td  class="hyunju__aboutBox--txt">이현주</td>
+                                <td class="hyunju__aboutBox--txt -tit">이름</td>
+                                <td  class="hyunju__aboutBox--txt">이현주 (Lee Hyun Ju)</td>
                             </tr>
                             <tr>
-                                <td class="hyunju__aboutBox--txt">나이</td>
+                                <td class="hyunju__aboutBox--txt -tit">나이</td>
                                 <td  class="hyunju__aboutBox--txt">23살 (1997. 05. 21)</td>
                             </tr>
                             <tr>
-                                <td class="hyunju__aboutBox--txt">학력</td>
-                                <td  class="hyunju__aboutBox--txt">동양미래대학교 졸업 (2019. 02)</td>
+                                <td class="hyunju__aboutBox--txt -tit">학력</td>
+                                <td  class="hyunju__aboutBox--txt">
+                                    2016. 02 - 경기영상과학고등학교 촬영조명과 졸업<br>
+                                    2019. 02 - 동양미래대학교 컴퓨터정보공학과 졸업<br>
+                                    2019. 03 ~ ing - 한국방송통신대학교 컴퓨터과학과 재학중
+                                </td>
                             </tr>
                             <tr>
-                                <td class="hyunju__aboutBox--txt" rowspan="3">자격증</td>
-                                <td  class="hyunju__aboutBox--txts">컴퓨터그래픽스운용기능사 / GTQ 2급</td>
-                            </tr>
-                            <tr>
-                                <td  class="hyunju__aboutBox--txts">ITQ 한글 / 엑셀 / 파워포인트 A등급</td>
-                            </tr>
-                            <tr>
-                                <td  class="hyunju__aboutBox--txts">운전면허증 2종</td>
-                            </tr>
-                            <tr>
-                                <td class="hyunju__aboutBox--txt">성격</td>
-                                <td  class="hyunju__aboutBox--txt">털털하고 활발하며 사람들과 두루두루 잘 친해지는 편이고, </td>
+                                <td class="hyunju__aboutBox--txt -tit">자격증</td>
+                                <td  class="hyunju__aboutBox--txts">
+                                    컴퓨터그래픽스운용기능사 / GTQ 2급<br>
+                                    ITQ 한글 / 엑셀 / 파워포인트 A등급<br>
+                                    운전면허증 2종
+                                </td>
                             </tr>
                         </table>
 
@@ -97,10 +99,10 @@
         </div>
 
         <!--work 부분-->
-        <div class="hyunju__work">
+        <div class="hyunju__work" id="sec2">
             <div class="hyunju__wrap">
                 <div class="titBox">
-                    <p class="titBox__desc">2017. 12 ~ ing</p>
+                    <p class="titBox__desc">2017. 10 ~ ing</p>
                     <p class="titBox__title">works</p>
                 </div>
 
@@ -110,8 +112,26 @@
                             <img src="/images/img_work01.jpg" alt="" class="item__img">
 
                             <div class="item__text">
-                                <h4 class="item__tit">will mall [ウィルモール]</h4>
-                                <p class="item__desc">リニューアル</p>
+                                <h4 class="item__tit">KT &amp; G 벤치마킹</h4>
+                                <p class="item__desc">2017.10 ~ 2017.11</p>
+                            </div>
+                        </a>
+
+                        <a href="#this" class="item">
+                            <img src="/images/img_work01.jpg" alt="" class="item__img">
+
+                            <div class="item__text">
+                                <h4 class="item__tit">캐논 사이트 벤치마킹</h4>
+                                <p class="item__desc">2017.11 ~ (일주일)</p>
+                            </div>
+                        </a>
+
+                        <a href="#this" class="item">
+                            <img src="/images/img_work01.jpg" alt="" class="item__img">
+
+                            <div class="item__text">
+                                <h4 class="item__tit">정책기획위원회</h4>
+                                <p class="item__desc">2017.12 ~ 2018. 유지보수</p>
                             </div>
                         </a>
 
@@ -119,17 +139,19 @@
                             <img src="/images/img_work02.jpg" alt="" class="item__img">
 
                             <div class="item__text">
-                                <h4 class="item__tit">will mall [ウィルモール]</h4>
-                                <p class="item__desc">リニューアル</p>
+                                <h4 class="item__tit">KORAMCO 자산신탁</h4>
+                                <p class="item__desc">2018.01 ~ 2018.10</p>
                             </div>
                         </a>
+                    </div>
 
+                    <div class="items">
                         <a href="#this" class="item">
                             <img src="/images/img_work03.png" alt="" class="item__img">
 
                             <div class="item__text">
-                                <h4 class="item__tit">will mall [ウィルモール]</h4>
-                                <p class="item__desc">リニューアル</p>
+                                <h4 class="item__tit">KORAMCO 자산운용</h4>
+                                <p class="item__desc">2018.01 ~ 2018.10</p>
                             </div>
                         </a>
 
@@ -137,19 +159,17 @@
                             <img src="/images/img_work04.jpg" alt="" class="item__img">
 
                             <div class="item__text">
-                                <h4 class="item__tit">will mall [ウィルモール]</h4>
-                                <p class="item__desc">リニューアル</p>
+                                <h4 class="item__tit">하림 지주</h4>
+                                <p class="item__desc">2018.03 ~ 2018.06</p>
                             </div>
                         </a>
-                    </div>
 
-                    <div class="items">
                         <a href="#this" class="item">
                             <img src="/images/img_work05.jpg" alt="" class="item__img">
 
                             <div class="item__text">
-                                <h4 class="item__tit">will mall [ウィルモール]</h4>
-                                <p class="item__desc">リニューアル</p>
+                                <h4 class="item__tit">하림 그룹</h4>
+                                <p class="item__desc">2018 유지보수</p>
                             </div>
                         </a>
 
@@ -157,8 +177,8 @@
                             <img src="/images/img_work06.jpg" alt="" class="item__img">
 
                             <div class="item__text">
-                                <h4 class="item__tit">will mall [ウィルモール]</h4>
-                                <p class="item__desc">リニューアル</p>
+                                <h4 class="item__tit">신남방정책특별위원회</h4>
+                                <p class="item__desc">2018. 09 ~ 2018. 11</p>
                             </div>
                         </a>
                     </div>
@@ -166,7 +186,7 @@
             </div>
         </div>
 
-        <div class="hyunju__skill">
+        <div class="hyunju__skill" id="sec3">
             <div class="hyunju__wrap">
                 <div class="titBox">
                     <p class="titBox__desc">制作事例</p>
@@ -208,7 +228,7 @@
             </div>
         </div>
 
-        <div class="hyunju__contact">
+        <div class="hyunju__contact" id="sec4">
             <div class="hyunju__wrap">
                 <div class="titBox">
                     <p class="titBox__desc">制作事例</p>
@@ -228,11 +248,27 @@
                 <span class="hyunju__footer--text">&copy; 2019. hyunju Lee All rights reserved</span>
             </div>
         </footer>
+
+        <div class="up"></div>
+    </div>
     </div>
 </body>
 <script>
-    $(document).ready(function () {
-        $('select').selectOrDie();
+    $(function() {
+
+        var $up = $('.up')
+
+        var top = function(){
+
+            var topbtn = $('.up').siblings().position().top
+
+            $('html,body').animate({
+                scrollTop : topbtn
+            })
+
+        }
+
+        $up.click(top)
     });
 </script>
 </html>
