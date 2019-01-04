@@ -20,6 +20,39 @@
             right: 70px;
             z-index: 100;
             &--logo {
+                position: relative;
+                &:before {
+                    position: absolute;
+                    content:'';
+                    background: #000;
+                    width: 6px;
+                    height: 6px;
+                    display: block;
+                    border-radius: 50%;
+                    left: 22px;
+                    top: -53px;
+                    -webkit-animation: eyes-left 2s infinite;
+                }
+                @keyframes eyes-left {
+                    from {top: -53;}
+                    to {top: -47px;}
+                }
+                &:after {
+                    position: absolute;
+                    content:'';
+                    background: #000;
+                    width: 6px;
+                    height: 6px;
+                    display: block;
+                    border-radius: 50%;
+                    left: 34px;
+                    top: -53px;
+                    -webkit-animation: eyes-right 2s infinite;
+                }
+                @keyframes eyes-right {
+                    from {top: -53;}
+                    to {top: -47px;}
+                }
                 img {
                     width: 90px;
                     margin-left: 19px;
@@ -44,7 +77,7 @@
         &__main {
             background: url("/images/bg_main.jpg") no-repeat fixed center center;
             background-size: cover;
-            height: 800px;
+            height: 100vh;
         }
         &__titBox {
             padding-top: 350px;
@@ -124,7 +157,7 @@
                     float: right;
                     width: 50%;
                     text-align: center;
-                    margin-top: 15px;
+                    margin-top: 20px;
                     .profile {
                         border-radius: 50%;
                         width: 320px;
@@ -229,7 +262,17 @@
                 vertical-align: top;
                 width: 33%;
                 text-align: center;
+                font-size: 14px;
+                color: #55584f;
             }
+        }
+        &__skillList {
+            margin-top: 20px;
+        }
+        &__skillTit {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
     }
 
