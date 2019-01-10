@@ -78,6 +78,43 @@
             background: url("/images/bg_main.jpg") no-repeat fixed center center;
             background-size: cover;
             height: 100vh;
+            //페이지로드시 Fade In 효과주는 것
+            animation: fadein 2s;
+            -moz-animation: fadein 2s;
+            -webkit-animation: fadein 2s;
+            -o-animation: fadein 2s;
+        }
+        @keyframes fadein {
+            from {
+                opacity:0.1;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-moz-keyframes fadein {
+            from {
+                opacity:0.1;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes fadein {
+            from {
+                opacity:0.1;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-o-keyframes fadein {
+            from {
+                opacity:0.1;
+            }
+            to {
+                opacity: 1;
+            }
         }
         &__titBox {
             padding-top: 350px;
@@ -90,7 +127,7 @@
             display: block;
             color: #fff;
             ::selection {
-                background: #D10000;
+                background: #ff6570;
                 color: #ffffff;
             }
             .name {
@@ -210,18 +247,24 @@
                     width: 24%;
                     margin-left: 10px;
                     margin-bottom: 10px;
-                    border: 1px solid rgba(#343434, 0.5);
+                    border: 1px solid rgba(#343434, 0.1);
+                    overflow: hidden;
                     &__img {
                         width: 100%;
+                        transition: all 0.3s;
+                    }
+                    &__imgWrap {
+                        width: 289px;
+                        height: 163px;
+                        overflow: hidden;
                     }
                     &__tit {
-                        margin-top: 28px;
                         font-size: 17px;
                         transition: all 0.2s;
                         color: #555555;
                     }
                     &__text {
-                        margin-top: 28px;
+                        margin-top: 10px;
                         font-size: 12px;
                         padding-left: 15px;
                         padding-bottom: 15px;
@@ -230,6 +273,10 @@
                     &:hover {
                         .item__tit {
                             color: #ff6570;
+                        }
+                        img {
+                            transform: scale(1.1);
+                            opacity: 0.8;
                         }
                     }
                 }
@@ -287,3 +334,4 @@
     width: 58px;
     height: 38px;
 }
+

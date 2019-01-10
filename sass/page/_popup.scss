@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+.popup {
+    &Box {
+        max-width:800px;
+        display: inline-block;
+    }
+    &__titBox {
+        position: relative;
+        text-align: left;
+        margin: 40px;
+        padding-left: 15px;
+        &:before {
+            position: absolute;
+            background: #ff6570;
+            content: '';
+            display: block;
+            left: -10px;
+            top: 0;
+            width: 6px;
+            height: 67px;
+        }
+    }
+    &__sTit {
+        font-size: 12px;
+        font-weight: 300;
+    }
+    &__tit {
+        font-size: 24px;
+        font-weight: 400;
+    }
+    &__content {
+        display: block;
+        &Img {
+            width: 400px;
+            text-align: center;
+            display: inline-block;
+            img {
+                width: 100%;
+                display: inline-block;
+                float: left;
+            }
+        }
+        &Text {
+            font-size: 16px;
+            float: right;
+        }
+    }
+    &__overview {
+        width: 400px;
+    }
+}
