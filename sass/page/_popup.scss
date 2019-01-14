@@ -1,15 +1,19 @@
 @charset "UTF-8";
 
 .popup {
+    *::selection {
+        background: #ff6570;
+        color: #fff;
+    }
     &Box {
-        max-width:800px;
+        padding: 40px;
         display: inline-block;
     }
     &__titBox {
         position: relative;
         text-align: left;
-        margin: 40px;
         padding-left: 15px;
+        display: block;
         &:before {
             position: absolute;
             background: #ff6570;
@@ -24,6 +28,7 @@
     &__sTit {
         font-size: 12px;
         font-weight: 300;
+        padding-top: 10px;
     }
     &__tit {
         font-size: 24px;
@@ -31,22 +36,94 @@
     }
     &__content {
         display: block;
+        &Tit {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 28px;
+            color: #8f8d8d;
+            width: 50px;
+            padding: 6px 0;
+        }
         &Img {
-            width: 400px;
+            width: 300px;
             text-align: center;
+            margin: 0 57px 0 27px;
             display: inline-block;
+            height: 350px;
             img {
                 width: 100%;
                 display: inline-block;
-                float: left;
+                padding-top: 70px;
             }
         }
         &Text {
             font-size: 16px;
-            float: right;
+            display: inline-block;
+            width: 400px;
+            height: 223px;
+            position: relative;
+            margin-left: 10px;
+            vertical-align: top;
+            padding-top: 15px;
+            &:before {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                background: #dcdcdc;
+                height: 355px;
+                width: 1px;
+                left: -33px;
+                top: 9px;
+            }
+        }
+        &Desc {
+            font-size: 12px;
+            color: #c1c1c1;
+            line-height: 18px;
+            font-weight: 300;
+            .colorBox {
+                margin-top: 6px;
+            }
+            .color {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin-right: 5px;
+                display: inline-block;
+                &.-red {
+                    background: #e3001a;
+                }
+                &.-orange {
+                    background: #f05f2b;
+                }
+                &.-green {
+                    background: #a3cc70;
+                }
+                &.-gray {
+                    background: #454545;
+                }
+                &.-white {
+                    background: #efefef;
+                }
+            }
         }
     }
     &__overview {
         width: 400px;
+    }
+    .popupBtn {
+        padding-top: 10px;
+        a {
+            display: inline-block;
+            width: 150px;
+            color: #fff;
+            background: #cacaca;
+            font-size: 14px;
+            padding: 10px;
+            text-align: center;
+            &.ml13 {
+                margin-left: 13px;
+            }
+        }
     }
 }
