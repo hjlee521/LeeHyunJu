@@ -294,6 +294,9 @@
         &__contact {
             background: #fff;
             padding: 60px 0;
+            &Tit {
+                width: 100px;
+            }
             &--txt {
                 font-size: 14px;
                 color: #55584f;
@@ -309,7 +312,7 @@
                 margin-left: 50px;
                 img {
                     vertical-align: middle;
-                    margin-right: 10px;
+                    margin-right: 15px;
                 }
                 .link {
                     color: #ff6570;
@@ -317,6 +320,9 @@
                 }
                 td {
                     padding: 8px 10px;
+                }
+                .nopd {
+                    padding: 0 0 8px 10px;
                 }
             }
         }
