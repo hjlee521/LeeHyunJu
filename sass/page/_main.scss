@@ -163,27 +163,26 @@
                 overflow: hidden;
                 height: 520px;
                 box-sizing: border-box;
+                .date {
+                    font-weight: 400;
+                }
                 &--tit {
                     font-size: 26px;
                     color: #44494d;
                 }
                 &--txt {
                     margin-bottom: 27px;
-                    padding: 10px;
-                    font-size: 14px;
+                    padding: 0 10px 12px;
+                    font-size: 13px;
                     color: #55584f;
-                    line-height: 25px;
+                    line-height: 23px;
                     vertical-align: top;
+                    font-weight: 300;
                     &.-tit {
                         font-weight: 700;
+                        padding: 0 10px 0 0;
+                        font-size: 15px;
                     }
-                }
-                &--txts {
-                    padding: 10px 10px 0 10px;
-                    font-size: 14px;
-                    color: #55584f;
-                    line-height: 25px;
-                    vertical-align: top;
                 }
                 &--left {
                     float: left;
@@ -300,10 +299,37 @@
                 color: #55584f;
                 line-height: 25px;
             }
+            &Map {
+                display: inline-block;
+            }
+            &Detail {
+                font-size: 13px;
+                vertical-align: top;
+                display: inline-block;
+                margin-left: 50px;
+                img {
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+                .link {
+                    color: #ff6570;
+                    text-decoration: underline;
+                }
+                td {
+                    padding: 8px 10px;
+                }
+            }
         }
         &__skill {
             background: #f6f7f9;
             padding: 60px 0;
+            &s {
+                display: block;
+                &.-mt20 {
+                    margin-top: 80px;
+                    margin-left: 100px;
+                }
+            }
             &--list {
                 display: inline-block;
                 vertical-align: top;
@@ -311,6 +337,22 @@
                 text-align: center;
                 font-size: 14px;
                 color: #55584f;
+            }
+            &Txt {
+                font-size: 14px;
+                line-height: 21px;
+                position: relative;
+                padding-left: 17px;
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    width: 3px;
+                    height: 3px;
+                    background: #ff6570;
+                    left: 3px;
+                    top: 9px;
+                }
             }
         }
         &__skillList {
@@ -320,6 +362,12 @@
             font-size: 20px;
             font-weight: 700;
             margin-bottom: 10px;
+            &.-ex {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 10px;
+                color: #55584f;
+            }
         }
     }
 
