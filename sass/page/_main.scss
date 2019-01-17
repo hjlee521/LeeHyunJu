@@ -10,6 +10,9 @@
             width: 1100px;
             margin: 0 auto;
         }
+        &__mLogo {
+            display: none;
+        }
         &__bg {
             text-align: center;
         }
@@ -74,6 +77,9 @@
                 }
             }
         }
+        &__Mgnb {
+            display: none;
+        }
         &__main {
             background: url("/images/bg_main.jpg") no-repeat fixed center center;
             background-size: cover;
@@ -119,7 +125,7 @@
         &__titBox {
             padding-top: 350px;
             text-align: left;
-            padding-left: 320px;
+            padding-left: 200px;
         }
         &__title {
             font-size: 50px;
@@ -150,9 +156,9 @@
         }
 
         &__about {
-            margin-top: 68px;
+            margin-top: 100px;
             display: block;
-            margin-bottom: 60px;
+            margin-bottom: 100px;
             &--left {
                 display: inline-block;
                 width: 100%;
@@ -199,6 +205,9 @@
                         width: 320px;
                         border: 5px solid #fff;
                     }
+                    &.-mq {
+                        display: none;
+                    }
                 }
             }
         }
@@ -218,7 +227,7 @@
             }
             &__desc {
                 margin-left: 27px;
-                font-size: 15px;
+                font-size: 13px;
                 color: #8C8C8C;
                 font-weight: 300;
             }
@@ -279,6 +288,9 @@
                         }
                     }
                 }
+            }
+            &.-mq {
+                display: none;
             }
         }
         &__footer {
@@ -389,3 +401,176 @@
     height: 38px;
 }
 
+@media screen and (max-width: 1024px){
+    .hyunju {
+        &__wrap {
+            width: auto;
+        }
+        &__titBox {
+            padding-left: 200px;
+            padding-top: 450px;
+        }
+        &__gnb {
+            right: 40px;
+        }
+        .center {
+            width: auto;
+            display: inline-block;
+            text-align: left;
+        }
+        &__main {
+            height: 100vh;
+        }
+        .titBox {
+            padding-left: 40px;
+        }
+        &__aboutBox {
+            height: 850px;
+            &--tit {
+                text-align: center;
+            }
+            &--left {
+                width: 100%;
+                text-align: center;
+            }
+            &--right {
+                width: 100%;
+                &.-mq {
+                    display: block;
+                }
+                &.-mqWeb {
+                    display: none;
+                }
+            }
+        }
+        .itemBox {
+            &.-mqWeb {
+                display: none;
+            }
+            &.-mq {
+                display: block;
+                width: 100%;
+                padding-left: 54px;
+                .item {
+                    width: 30%;
+                    margin: 5px;
+                    &__imgWrap {
+                        width: 331px;
+                        overflow: hidden;
+                    }
+                    &:nth-child(1) {
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+        &__contact {
+            &Mq {
+                padding: 0 35px;
+            }
+            &Detail {
+                margin-left: 16px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .hyunju{
+        &__mLogo {
+            display: block;
+            margin-bottom: 30px;
+        }
+        &__gnb--box {
+            background: #ffffff;
+        }
+        &__MgnbWrap {
+            text-align: center;
+        }
+        &__titBoxWrap {
+            text-align: center;
+        }
+        &__title {
+            font-size: 36px;
+            color: #ff6570;
+            font-weight: 400;
+        }
+        &__titBox {
+            display: inline-block;
+            text-align: center;
+            padding-top: 300px;
+            padding-left: 0;
+        }
+        &__desc{
+            font-size: 22px;
+            &.-addTxt {
+                margin-top: 17px;
+                font-size: 18px;
+            }
+        }
+        .itemBox.-mq .item {
+            width: 44%;
+            margin: 5px;
+        }
+        &__aboutBox {
+            height: 850px;
+        }
+        .center {
+            width: auto;
+            display: inline-block;
+            text-align: left;
+        }
+        &__skills.-mt20 {
+            margin-top: 45px;
+            margin-left: 58px;
+        }
+        &__contactMap {
+            display: block;
+            text-align: center;
+        }
+        &__contactDetail {
+            margin-left: 93px;
+            margin-top: 46px;
+        }
+        &__gnb {
+            display: none;
+        }
+        &__Mgnb {
+            position: fixed;
+            width: 100%;
+            display: block;
+            text-align: center;
+            a {
+                display: inline-block;
+                padding: 20px;
+                transition: none;
+            }
+        }
+        &__main {
+            background: url("/images/bg_main.jpg") no-repeat fixed center center;
+            background-size: cover;
+            height: 100vh;
+            //페이지로드시 Fade In 효과주는 것
+            animation:none;
+            -moz-animation: none;
+            -webkit-animation: none;
+            -o-animation: none;
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .hyunju {
+        &__title {
+            font-size: 28px;
+        }
+        &__desc {
+            font-size: 20px;
+            &.hyunju__desc
+        }
+        &__titBox {
+            padding-top: 266px;
+        }
+    }
+    .hyunju__aboutBox {
+        height: 950px;
+    }
+}
