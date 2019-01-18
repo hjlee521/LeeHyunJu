@@ -127,3 +127,30 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px){
+    .popup {
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 40px;
+    }
+    .popup__contentImg {
+        width: 100%;
+        text-align: left;
+        img {
+            width: 60%;
+        }
+    }
+    .popup__contentText:before {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 480px){
+
+}
+
