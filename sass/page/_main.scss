@@ -156,9 +156,8 @@
         }
 
         &__about {
-            margin-top: 100px;
+            padding-top: 100px;
             display: block;
-            margin-bottom: 100px;
             &--left {
                 display: inline-block;
                 width: 100%;
@@ -212,6 +211,10 @@
             }
         }
 
+        &__work {
+            padding-top: 100px;
+        }
+
         //common
 
         .titBox {
@@ -248,11 +251,8 @@
             padding-bottom: 60px;
             .items {
                 .item {
-                    &:nth-child(1) {
-                        margin-left: 0;
-                    }
                     display: inline-block;
-                    width: 24%;
+                    width: 23%;
                     margin-left: 10px;
                     margin-bottom: 10px;
                     border: 1px solid rgba(#343434, 0.1);
@@ -288,9 +288,6 @@
                         }
                     }
                 }
-            }
-            &.-mq {
-                display: none;
             }
         }
         &__footer {
@@ -456,19 +453,14 @@
             }
         }
         .itemBox {
-            &.-mqWeb {
-                display: none;
-            }
-            &.-mq {
-                display: block;
-                width: 100%;
-                padding-left: 54px;
+            .items {
                 .item {
-                    width: 30%;
-                    margin: 5px;
-                    &:nth-child(1) {
-                        margin: 5px;
-                    }
+                    display: inline-block;
+                    width: 23%;
+                    margin-left: 10px;
+                    margin-bottom: 10px;
+                    border: 1px solid rgba(#343434, 0.1);
+                    overflow: hidden;
                 }
             }
         }
@@ -519,9 +511,17 @@
                 font-size: 18px;
             }
         }
-        .itemBox.-mq .item {
-            width: 44%;
-            margin: 5px;
+        .itemBox {
+            .items {
+                .item {
+                    display: inline-block;
+                    width: 31%;
+                    margin-left: 10px;
+                    margin-bottom: 10px;
+                    border: 1px solid rgba(#343434, 0.1);
+                    overflow: hidden;
+                }
+            }
         }
         &__aboutBox {
             height: 850px;
@@ -583,30 +583,27 @@
             }
         }
         &__titBox {
-            padding-top: 266px;
+            padding-top: 210px;
         }
         &__aboutBox {
             height: 920px;
             padding: 70px 30px;
         }
         .itemBox {
-            &.-mq {
-                display: block;
+            .items {
                 width: 100%;
-                padding: 0 10px;
-            }
-            .item {
-                &__text {
-                    text-align: center;
+                .item {
+                    display: block;
+                    width: 97%;
+                    margin: 5px;
+                    &__text {
+                        text-align: center;
+                    }
                 }
             }
         }
-        .itemBox.-mq .item {
-            margin: 5px;
-            width: 100%;
-        }
         &__skill {
-            margin-top: 50px;
+            padding-top: 80px;
         }
         &__skill--list {
             width: 100%;
