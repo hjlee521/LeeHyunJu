@@ -213,6 +213,27 @@
 
         &__work {
             padding-top: 100px;
+            margin-bottom: 50px;
+            .more {
+                text-align: center;
+                &Btn {
+                    width: 28%;
+                    max-width: 280px;
+                    padding: 10px 0;
+                    background: rgba(#8d93a1,0.7);
+                    text-align: center;
+                    cursor: pointer;
+                    color: #fff;
+                    display: inline-block;
+                    transition: all 0.3s;
+                    &.close {
+                        display: none;
+                    }
+                    &:hover {
+                        background: #8d93a1;
+                    }
+                }
+            }
         }
 
         //common
@@ -250,6 +271,24 @@
             display: block;
             padding-bottom: 60px;
             .items {
+                .item:nth-of-type(7) {
+                    display: none;
+                }
+                .item:nth-of-type(8) {
+                    display: none;
+                }
+                .item:nth-of-type(9) {
+                    display: none;
+                }
+                .item:nth-of-type(10) {
+                    display: none;
+                }
+                .item:nth-of-type(11) {
+                    display: none;
+                }
+                .item:nth-of-type(12) {
+                    display: none;
+                }
                 .item {
                     display: inline-block;
                     width: 23%;
@@ -257,13 +296,14 @@
                     margin-bottom: 10px;
                     border: 1px solid rgba(#343434, 0.1);
                     overflow: hidden;
+                    //더보기 버튼 누르기 전까지는 컨텐츠물 가리기
                     &__img {
                         width: 100%;
                         transition: all 0.3s;
                     }
                     &__imgWrap {
                         width: auto;
-                        height: 163px;
+                        height: auto;
                         overflow: hidden;
                     }
                     &__tit {
@@ -288,6 +328,9 @@
                         }
                     }
                 }
+            }
+            .more {
+                margin-top: 30px;
             }
         }
         &__footer {
@@ -395,11 +438,32 @@
     right: 5%;
     z-index: 3;
     width: 58px;
-    height: 38px;
+    height: 60px;
+    transition: all 0.4s;
+    &:hover {
+        bottom: 7%;
+    }
 }
 
 @media screen and (max-width: 1024px){
     .hyunju {
+        &__gnb {
+            display: none;
+        }
+        &__Mgnb {
+            position: fixed;
+            width: 100%;
+            display: block;
+            text-align: center;
+            z-index: 100;
+            border-bottom: 1px solid #e0e0e0;
+            background: #fff;
+            a {
+                display: inline-block;
+                padding: 20px;
+                transition: none;
+            }
+        }
         &__wrap {
             width: auto;
         }
@@ -417,10 +481,7 @@
         }
         &__titBox {
             padding-left: 0;
-            padding-top: 330px;
-        }
-        &__gnb {
-            right: 40px;
+            padding-top: 240px;
         }
         .center {
             width: auto;
@@ -456,7 +517,7 @@
             .items {
                 .item {
                     display: inline-block;
-                    width: 23%;
+                    width: 31.5%;
                     margin-left: 10px;
                     margin-bottom: 10px;
                     border: 1px solid rgba(#343434, 0.1);
@@ -515,7 +576,7 @@
             .items {
                 .item {
                     display: inline-block;
-                    width: 31%;
+                    width: 48%;
                     margin-left: 10px;
                     margin-bottom: 10px;
                     border: 1px solid rgba(#343434, 0.1);
@@ -542,22 +603,6 @@
         &__contactDetail {
             margin-left: 0;
             margin-top: 46px;
-        }
-        &__gnb {
-            display: none;
-        }
-        &__Mgnb {
-            position: fixed;
-            width: 100%;
-            display: block;
-            text-align: center;
-            z-index: 100;
-            border-bottom: 1px solid #e0e0e0;
-            a {
-                display: inline-block;
-                padding: 20px;
-                transition: none;
-            }
         }
         &__main {
             background: url("/images/bg_main.jpg") no-repeat fixed center center;
@@ -596,6 +641,16 @@
                     display: block;
                     width: 97%;
                     margin: 5px;
+                    &__tit {
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                    &__desc {
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
                     &__text {
                         text-align: center;
                     }
