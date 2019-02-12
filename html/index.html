@@ -5,79 +5,80 @@
     <link href="/images/SmallLogo.ico" rel="shortcut icon">
     <meta name="viewport" content="width=divice-width,initial-scale=1,user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" href="/css/style.css"  type="text/css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="/css/magnific-popup.css">
-    <title>웹 퍼블리셔 | 이현주 포트폴리오</title>
+    <link rel="stylesheet" href="/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>포트폴리오 | 웹 퍼블리셔 이현주</title>
     <meta name="description" content="안녕하세요 이현주 포트폴리오입니다">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="웹 퍼블리셔 | 이현주 포트폴리오">
+    <meta property="og:title" content="포트폴리오 | 웹 퍼블리셔 이현주">
     <meta property="og:url" content="hyunju521.com">
     <meta property="og:site_name" content="web_study">
     <meta property="og:description" content="안녕하세요 2019년 이현주 포트폴리오입니다.">
     <meta property="og:image" content="http://hyunju521.com/">
+    <link rel="stylesheet" href="../sass/page/_main.scss">
 </head>
 <body>
+
+<!--로딩이미지 표시-->
+<div class="wrap-loading display-none" id="loading-toggle">
+</div>
+<!--//로딩이미지 표시-->
+
 <div class="hyunju">
     <!--메인부분-->
-    <nav class="hyunju__gnb">
-        <a href="http://hyunju521.com/" class="hyunju__gnb--logo"><img src="/images/my_logo_blank.png" alt=""></a>
-        <div class="hyunju__gnb--box">
-            <a href="/html/index.html#sec1" class="hyunju__gnb--list">ABOUT</a>
-            <a href="/html/index.html#sec2" class="hyunju__gnb--list">WORKS</a>
-            <a href="/html/index.html#sec3" class="hyunju__gnb--list">SKILL</a>
-            <a href="/html/index.html#sec4" class="hyunju__gnb--list">CONTACT</a>
-        </div>
-    </nav>
-
     <nav class="hyunju__Mgnb" data-aos="fade-down" style="z-index: 100;">
         <div class="hyunju__gnb--box">
-            <a href="/html/index.html#sec1" class="hyunju__gnb--list">ABOUT</a>
-            <a href="/html/index.html#sec2" class="hyunju__gnb--list">WORKS</a>
-            <a href="/html/index.html#sec3" class="hyunju__gnb--list">SKILL</a>
-            <a href="/html/index.html#sec4" class="hyunju__gnb--list">CONTACT</a>
+            <a href="#this" class="hyunju__gnb--list"><i class="fab fa-fort-awesome"></i></a>
+            <a href="#this" class="hyunju__gnb--list">ABOUT</a>
+            <a href="#this" class="hyunju__gnb--list">WORKS</a>
+            <a href="#this" class="hyunju__gnb--list">SKILL</a>
+            <a href="#this" class="hyunju__gnb--list">CONTACT</a>
         </div>
     </nav>
 
-    <div class="hyunju__main" id="vis">
+    <div class="hyunju__main secTop" id="sec0">
 
         <div class="hyunju__titBoxWrap">
             <div class="hyunju__titBox">
-                <h1 class="hyunju__mLogo wow swing">
+
+                <h1 class="hyunju__mLogo">
                     <img src="/images/my_logo_m.png" alt="">
                 </h1>
+
                 <h3 class="hyunju__desc">
-                    <span data-aos="fade-down">UI/UX</span>
-                    <span data-aos="fade-down"> &amp; </span>
-                    <span data-aos="fade-down">Publishing</span>
-                    <span data-aos="fade-down"> Developer</span>
+                    <span>UI/UX</span>
+                    <span> &amp; </span>
+                    <span>Publishing</span>
+                    <span> Developer</span>
                 </h3>
                 <h2 class="hyunju__title">
-                    <span class="name" data-aos="fade-down" data-aos-easing="linear"
-                          data-aos-duration="1000">Hello,</span>
-                    <span class="name" data-aos="fade-down" data-aos-easing="linear"
-                          data-aos-duration="2000">Hyun</span>
-                    <span class="name" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2500">Ju</span>
-                    <span class="name" data-aos="fade-down" data-aos-easing="linear"
-                          data-aos-duration="3000">Wolrd \n</span>
+                    <span class="name">Hello,</span>
+                    <span class="name">Hyun</span>
+                    <span class="name">Ju</span>
+                    <span class="name">Wolrd \n</span>
                 </h2>
-                <h3 class="hyunju__desc -addTxt" data-aos="fade-down">Welcome to My Home :)</h3>
+                <h3 class="hyunju__addTxt">Welcome to My Home !</h3>
             </div>
         </div>
 
     </div>
 
-    <div class="hyunju__about" id="sec1">
+    <div class="hyunju__about secTop" id="sec1">
         <div class="hyunju__wrap">
             <div class="hyunju__about--left">
-                <div class="titBox wow bounce" data-wow-duration="2s">
+
+                <div class="titBox wow pulse" data-wow-duration="1s">
                     <p class="titBox__desc">저를 소개합니다.</p>
                     <p class="titBox__title">about</p>
                 </div>
 
                 <div class="hyunju__aboutBox" data-aos="zoom-in" data-aos-duration="1500">
-                    <h3 class="hyunju__aboutBox--tit">PROFILE</h3>
 
                     <div class="hyunju__aboutBox--right -mq">
                         <img src="/images/img_profile.jpg" alt="" class="profile">
@@ -127,166 +128,130 @@
     </div>
 
     <!--work 부분-->
-    <div class="hyunju__work" id="sec2">
+    <div class="hyunju__work secTop" id="sec2">
         <div class="hyunju__wrap">
-            <div class="titBox wow bounce" data-wow-duration="2s">
+            <div class="titBox wow pulse" data-wow-duration="1s">
                 <p class="titBox__desc">현재까지 작업해 온 프로젝트를 소개합니다 :)</p>
                 <p class="titBox__title">works</p>
             </div>
 
             <div class="itemBox">
                 <ul class="items">
-                    <li class="item"  data-aos="zoom-in" data-aos-duration="1000">
-                        <a class="test-popup-link01" href="/images/img_work01.png" target="_blank">
-                            <div class="item__imgWrap">
-                                <img src="/images/img_work01.png" alt="" class="item__img">
-                            </div>
-                            <div class="item__text">
-                                <h4 class="item__tit">KT &amp; G 벤치마킹</h4>
-                                <p class="item__desc">2017.10 ~ 11</p>
-                            </div>
-                        </a>
-                    </li>
-
                     <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a class="test-popup-link02" href="/images/img_work01.png" target="_blank">
-                            <div class="item__imgWrap">
-                                <img src="/images/img_work02.png" alt="" class="item__img">
-                            </div>
-
-                            <div class="item__text">
-                                <h4 class="item__tit">캐논 사이트 벤치마킹</h4>
-                                <p class="item__desc">2017.11 ~ (일주일)</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a href="http://pcpp.go.kr/main.do" target="_blank" class="test-popup-link03">
-                            <div class="item__imgWrap">
-                                <img src="/images/img_work03.png" alt="" class="item__img">
-                            </div>
-
-                            <div class="item__text">
-                                <h4 class="item__tit">정책기획위원회</h4>
-                                <p class="item__desc">2018 유지보수</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a href="http://www.koramco.co.kr/" target="_blank" class="test-popup-link04">
-                            <div class="item__imgWrap">
-                                <img src="/images/img_work04.png" alt="" class="item__img">
-                            </div>
-
-                            <div class="item__text">
-                                <h4 class="item__tit">KORAMCO 자산신탁</h4>
-                                <p class="item__desc">2017.12 ~ 2018.09</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a href="http://www.koramcofund.co.kr/main.do" target="_blank" class="test-popup-link05">
-                            <div class="item__imgWrap">
-                                <img src="/images/img_work05.png" alt="" class="item__img">
-                            </div>
-
-                            <div class="item__text">
-                                <h4 class="item__tit">KORAMCO 자산운용</h4>
-                                <p class="item__desc">2018.03 ~ 2018.09</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a href="http://www.harimholdings.co.kr/main/main.do" target="_blank" class="test-popup-link06">
-                            <div class="item__imgWrap">
-                                <img src="/images/img_work06.png" alt="" class="item__img">
-                            </div>
-
-                            <div class="item__text">
-                                <h4 class="item__tit">하림 지주</h4>
-                                <p class="item__desc">2018. 04 ~ 2018. 06</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a href="http://www.harim.com/main.hr" target="_blank" class="test-popup-link07">
-                            <div class="item__imgWrap">
-                                <img src="/images/img_work07.png" alt="" class="item__img">
-                            </div>
-
-                            <div class="item__text">
-                                <h4 class="item__tit">하림 그룹</h4>
-                                <p class="item__desc">2018 유지보수</p>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a href="http://pcpp.go.kr/main.do" target="_blank" class="test-popup-link08">
+                        <a href="http://pcpp.go.kr/main.do" target="_blank" class="">
                             <div class="item__imgWrap">
                                 <img src="/images/img_work08.png" alt="" class="item__img">
                             </div>
 
                             <div class="item__text">
                                 <h4 class="item__tit">신남방정책특별위원회</h4>
-                                <p class="item__desc">2018.10 ~ 2019. 01</p>
+                                <p class="item__desc">작업기간 : 2018.10 ~ 2019. 01</p>
+                                <p class="item__desc">기여도 : 98% 메인 제외 한 모든 페이지 작업</p>
+                                <p class="item__desc">Type : PC/Mobile</p>
                             </div>
                         </a>
                     </li>
 
                     <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a href="#this" target="_blank" class="test-popup-link08">
+                        <a href="http://www.harim.com/main.hr" target="_blank" class="">
                             <div class="item__imgWrap">
-                                <img src="/images/img_workTest.png" alt="" class="item__img">
+                                <img src="/images/img_work07.png" alt="" class="item__img">
                             </div>
 
                             <div class="item__text">
-                                <h4 class="item__tit">TEST</h4>
-                                <p class="item__desc">2018.10 ~ 2019. 01</p>
+                                <h4 class="item__tit">하림 그룹</h4>
+                                <p class="item__desc">작업기간 : 2018 유지보수</p>
+                                <p class="item__desc">기여도 : 45% 페이지 유지보수</p>
+                                <p class="item__desc">Type : PC</p>
                             </div>
                         </a>
                     </li>
 
                     <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a href="#this" target="_blank" class="test-popup-link08">
+                        <a href="http://www.harimholdings.co.kr/main/main.do" target="_blank" class="">
                             <div class="item__imgWrap">
-                                <img src="/images/img_workTest.png" alt="" class="item__img">
+                                <img src="/images/img_work06.png" alt="" class="item__img">
                             </div>
 
                             <div class="item__text">
-                                <h4 class="item__tit">TEST</h4>
-                                <p class="item__desc">2018.10 ~ 2019. 01</p>
+                                <h4 class="item__tit">하림 지주</h4>
+                                <p class="item__desc">작업기간 : 2018. 04 ~ 2018. 06</p>
+                                <p class="item__desc">기여도 : 85% 유지보수 및 리뉴얼작업</p>
+                                <p class="item__desc">Type : PC</p>
                             </div>
                         </a>
                     </li>
 
                     <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a href="#this" target="_blank" class="test-popup-link08">
+                        <a href="http://www.koramcofund.co.kr/main.do" target="_blank" class="">
                             <div class="item__imgWrap">
-                                <img src="/images/img_workTest.png" alt="" class="item__img">
+                                <img src="/images/img_work05.png" alt="" class="item__img">
                             </div>
 
                             <div class="item__text">
-                                <h4 class="item__tit">TEST</h4>
-                                <p class="item__desc">2018.10 ~ 2019. 01</p>
+                                <h4 class="item__tit">KORAMCO 자산운용</h4>
+                                <p class="item__desc">작업기간 : 2018.03 ~ 2018.09</p>
+                                <p class="item__desc">기여도 : 90%</p>
+                                <p class="item__desc">Type : PC/Mobile</p>
                             </div>
                         </a>
                     </li>
 
                     <li class="item" data-aos="zoom-in" data-aos-duration="1000">
-                        <a href="#this" target="_blank" class="test-popup-link08">
+                        <a href="http://www.koramco.co.kr/" target="_blank" class="">
                             <div class="item__imgWrap">
-                                <img src="/images/img_workTest.png" alt="" class="item__img">
+                                <img src="/images/img_work04.png" alt="" class="item__img">
                             </div>
 
                             <div class="item__text">
-                                <h4 class="item__tit">TEST</h4>
-                                <p class="item__desc">2018.10 ~ 2019. 01</p>
+                                <h4 class="item__tit">KORAMCO 자산신탁</h4>
+                                <p class="item__desc">작업기간 : 2017.12 ~ 2018.09</p>
+                                <p class="item__desc">기여도 : 98% 메인 제외 한 모든 페이지 작업</p>
+                                <p class="item__desc">Type : PC/Mobile</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="item" data-aos="zoom-in" data-aos-duration="1000">
+                        <a href="http://pcpp.go.kr/main.do" target="_blank" class="">
+                            <div class="item__imgWrap">
+                                <img src="/images/img_work03.png" alt="" class="item__img">
+                            </div>
+
+                            <div class="item__text">
+                                <h4 class="item__tit">정책기획위원회</h4>
+                                <p class="item__desc">작업기간 : 2018 유지보수</p>
+                                <p class="item__desc">기여도 : 60% 위원소개, 국정과정협의회</p>
+                                <p class="item__desc">Type : 반응형 웹</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="item" data-aos="zoom-in" data-aos-duration="1000">
+                        <a class="" href="http://hyunju521.com/canon/" target="_blank">
+                            <div class="item__imgWrap">
+                                <img src="/images/img_work02.png" alt="" class="item__img">
+                            </div>
+
+                            <div class="item__text">
+                                <h4 class="item__tit">Canon</h4>
+                                <p class="item__desc">작업기간 : 2017.11 ~ (일주일)</p>
+                                <p class="item__desc">기여도 : 100% 벤치마킹 리뉴얼 작업</p>
+                                <p class="item__desc">Type : 반응형 웹</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="item"  data-aos="zoom-in" data-aos-duration="1000">
+                        <a class="" href="http://hyunju521.com/ktng/" target="_blank">
+                            <div class="item__imgWrap">
+                                <img src="/images/img_work01.png" alt="" class="item__img">
+                            </div>
+                            <div class="item__text">
+                                <h4 class="item__tit">KT &amp; G</h4>
+                                <p class="item__desc">작업기간 : 2017.10 ~ 11</p>
+                                <p class="item__desc">기여도 : 100% 벤치마킹 리뉴얼 작업</p>
+                                <p class="item__desc">Type : 반응형 웹</p>
                             </div>
                         </a>
                     </li>
@@ -294,15 +259,16 @@
 
                 <div class="more">
                     <button type="button" class="moreBtn">더보기 +</button>
+                    <button type="button" class="moreBtn -close">접기 +</button>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="hyunju__skill" id="sec3">
+    <div class="hyunju__skill secTop" id="sec3">
         <div class="hyunju__wrap">
-            <div class="titBox wow bounce" data-wow-duration="2s">
+            <div class="titBox wow pulse" data-wow-duration="1s">
                 <p class="titBox__desc">Abilities &amp; Experience</p>
                 <p class="titBox__title">Skill</p>
             </div>
@@ -351,16 +317,16 @@
         </div>
     </div>
 
-    <div class="hyunju__contact" id="sec4">
+    <div class="hyunju__contact secTop" id="sec4">
         <div class="hyunju__wrap">
-            <div class="titBox wow bounce">
+            <div class="titBox wow pulse" data-wow-duration="1s">
                 <p class="titBox__desc">Call Me</p>
                 <p class="titBox__title">contact</p>
             </div>
 
             <div class="hyunju__contactMq" data-aos="zoom-in" data-aos-duration="1500">
                 <div class="hyunju__contactMap">
-                    <img src="/images/img_contact.jpg" alt="거주지">
+                    <img src="/images/img_contact.jpg" alt="">
                 </div>
                 <div class="hyunju__contactDetail">
                     <table>
@@ -412,15 +378,93 @@
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/js/jquery.bpopup.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script type="text/javascript" src="/js/wow.min.js"></script>
-<script src="/js/jquery.magnific-popup.min.js"></script>
 <script type="text/javascript">
-    $(function() {
 
-        /*Work 부분 더보기 버튼 누르면 포트폴리오가 더 펼쳐지는 기능*/
+    $(function () {
+        console.log('%c Welcome to %c Hyun Ju World ! ', 'background-color:#000000; color:#ffffff; font-size:23px;',
+            'background-color:red; color:#ffffff; font-size:23px;');
+    });
+
+    $(function () {
+        //페이지 position에 따라 메뉴에 active되는 기능
+        var $window = $(window);
+        var $sec = $('.secTop');
+        var sec0Pos = $('#sec0').position().top;
+        var sec1Pos = $('#sec1').position().top;
+        var sec2Pos = $('#sec2').position().top;
+        var sec3Pos = $('#sec3').position().top;
+        var sec4Pos = $('#sec4').position().top;
+        var $gnb = $('.hyunju__Mgnb');
+        var $active = $gnb.find('a');
+
+        var move = function () {
+
+            var nowScroll = $window.scrollTop();
+
+            if (nowScroll >= sec0Pos && nowScroll < sec1Pos) {
+                $active.removeClass('on');
+                $active.eq(0).addClass('on')
+            }
+            else if (nowScroll >= sec1Pos && nowScroll < sec2Pos) {
+                $active.removeClass('on');
+                $active.eq(1).addClass('on')
+            }
+            else if (nowScroll >= sec2Pos && nowScroll < sec3Pos) {
+                $active.removeClass('on');
+                $active.eq(2).addClass('on')
+            }
+            else if (nowScroll >= sec3Pos&& nowScroll < sec4Pos) {
+                $active.removeClass('on');
+                $active.eq(3).addClass('on')
+            }
+            else if (nowScroll >= sec4Pos) {
+                $active.removeClass('on');
+                $active.eq(4).addClass('on')
+            }
+        };
+
+        //this 클릭하면 그 자리로 가게 해주는 기능
+        $(window).scroll(move);
+
+        var menu = function () {
+
+            var index = $(this).index();
+            var pos = $sec.eq(index).position().top;
+
+            $('html, body').animate({
+                scrollTop:pos
+            })
+        };
+        $active.click(menu)
+    });
+
+    $(function() {
+        // main부분에 하나 둘 씩 스르르 나타나게 하는 기능
+        var $mainLogo = $('.hyunju__mLogo img');
+        var $mainStit = $('.hyunju__desc');
+        var $mainBtit = $('.hyunju__title');
+        var $mainXstit = $('.hyunju__addTxt');
+
+        $mainLogo.animate({width:90, opacity:1},400);
+
+        $mainStit.delay(1000).animate({opacity:1},1000,function () {
+            $mainBtit.animate({opacity:1},1000, function () {
+                $mainXstit.animate({opacity:1},500)
+            });
+        });
+
+
+    /*Work 부분 더보기 버튼 누르면 포트폴리오가 더 펼쳐지는 기능*/
+        $(".-close").hide();
+
         $(".moreBtn").on("click",function(){
-            $(".item").siblings().css("display","inline-block")
+            $(".item").slideDown('slow', function () {
+                $(".item").css("display","inline-block")
+            });
+            $(".moreBtn").hide();
         });
 
         /*좌측에 구름 아이콘 누르면 맨 위로 올라가는 동작*/
@@ -440,80 +484,6 @@
         AOS.init();
 
         new WOW().init();
-
-        // 팝업창 띄우는 것
-        $('.test-popup-link01').magnificPopup({
-            //KT & G 벤치마킹 작업한 것 내용 설명
-            items: [
-                {
-                    src: 'http://hyunju521.com/page/ktng.html',
-                    type: 'iframe'
-                }
-            ]
-        });
-
-        $('.test-popup-link02').magnificPopup({
-            items: [
-                {
-                    src: 'http://hyunju521.com/page/canon.html',
-                    type: 'iframe'
-                }
-            ]
-        });
-
-        $('.test-popup-link03').magnificPopup({
-            items: [
-                {
-                    src: 'http://hyunju521.com/page/ppcp.html',
-                    type: 'iframe'
-                }
-            ]
-        });
-
-        $('.test-popup-link04').magnificPopup({
-            items: [
-                {
-                    src: 'http://hyunju521.com/page/koramco01.html',
-                    type: 'iframe'
-                }
-            ]
-        });
-
-        $('.test-popup-link05').magnificPopup({
-            items: [
-                {
-                    src: 'http://hyunju521.com/page/koramco02.html',
-                    type: 'iframe'
-                }
-            ]
-        });
-
-        $('.test-popup-link06').magnificPopup({
-            items: [
-                {
-                    src: 'http://hyunju521.com/page/harimjiju.html',
-                    type: 'iframe'
-                }
-            ]
-        });
-
-        $('.test-popup-link07').magnificPopup({
-            items: [
-                {
-                    src: 'http://hyunju521.com/page/harimgroup.html',
-                    type: 'iframe'
-                }
-            ]
-        });
-
-        $('.test-popup-link08').magnificPopup({
-            items: [
-                {
-                    src: 'http://hyunju521.com/page/nsp.html',
-                    type: 'iframe'
-                }
-            ]
-        });
     });
 </script>
 </html>

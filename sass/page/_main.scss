@@ -6,6 +6,9 @@
             background: #ff6570;
             color: #fff;
         }
+        .secTop {
+            padding: 110px 0;
+        }
         &__wrap {
             width: 1100px;
             margin: 0 auto;
@@ -13,83 +16,49 @@
         &__mLogo {
             display: block;
             margin-bottom: 30px;
+            img {
+                width: 20px;
+            }
         }
         &__bg {
             text-align: center;
         }
-        &__gnb {
-            position: fixed;
-            top: 120px;
-            width: 130px;
-            right: 70px;
-            z-index: 100;
-            &--logo {
-                position: relative;
-                &:before {
-                    position: absolute;
-                    content:'';
-                    background: #000;
-                    width: 6px;
-                    height: 6px;
-                    display: block;
-                    border-radius: 50%;
-                    left: 22px;
-                    top: -53px;
-                    -webkit-animation: eyes-left 2s infinite;
-                }
-                @keyframes eyes-left {
-                    from {top: -53;}
-                    to {top: -47px;}
-                }
-                &:after {
-                    position: absolute;
-                    content:'';
-                    background: #000;
-                    width: 6px;
-                    height: 6px;
-                    display: block;
-                    border-radius: 50%;
-                    left: 34px;
-                    top: -53px;
-                    -webkit-animation: eyes-right 2s infinite;
-                }
-                @keyframes eyes-right {
-                    from {top: -53;}
-                    to {top: -47px;}
-                }
-                img {
-                    width: 90px;
-                    margin-left: 19px;
-                    margin-bottom: 14px;
-                }
-            }
-            &--box {
-                background: rgba(#fff,0.8);
-            }
-            &--list {
-                font-size: 14px;
-                text-transform: uppercase;
-                display: block;
-                text-align: left;
-                padding: 10px 20px;
-                transition: all 0.1s;
-                &:hover {
-                    color: #ff6570;
-                }
+        .hyunju__gnb--list {
+            &.on {
+                color: #ff6570;
             }
         }
         &__Mgnb {
-            display: none;
+            position: fixed;
+            width: 100%;
+            display: block;
+            text-align: center;
+            z-index: 100;
+            border-bottom: 1px solid #e0e0e0;
+            background: #fff;
+            a {
+                display: inline-block;
+                padding: 20px;
+                transition: none;
+            }
+            .hyunju__gnb--list {
+                font-size: 14px;
+                &.on {
+                    color: #ff6570;
+                }
+            }
         }
         &__main {
             background: url("/images/bg_main.jpg") no-repeat fixed center center;
             background-size: cover;
             height: 100vh;
+            position: relative;
             //페이지로드시 Fade In 효과주는 것
             animation: fadein 2s;
             -moz-animation: fadein 2s;
             -webkit-animation: fadein 2s;
             -o-animation: fadein 2s;
+            overflow: hidden;
         }
         @keyframes fadein {
             from {
@@ -124,20 +93,25 @@
             }
         }
         &__titBox {
-            padding-top: 300px;
             text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
         }
         &__title {
             font-size: 50px;
             font-weight: 700;
             display: block;
             color: #fff;
+            opacity: 0;
             ::selection {
                 background: #ff6570;
                 color: #ffffff;
             }
             .name {
                 font-weight: 700;
+                font-family: 'Pacifico', cursive;
             }
         }
         &__title {
@@ -146,17 +120,22 @@
             font-weight: 400;
         }
         &__desc {
-            font-size: 25px;
+            font-size: 22px;
             font-weight: 300;
+            font-family:'Handlee', cursive;
             color: #5f5b5a;
-            &.-addTxt {
-                margin-top: 36px;
-                font-size: 18px;
-            }
+            opacity: 0;
+        }
+        &__addTxt {
+            margin-top: 36px;
+            font-size: 18px;
+            font-weight: 300;
+            font-family:'Handlee', cursive;
+            color: #5f5b5a;
+            opacity: 0;
         }
 
         &__about {
-            padding-top: 100px;
             display: block;
             &--left {
                 display: inline-block;
@@ -180,7 +159,7 @@
                     padding: 0 10px 12px;
                     font-size: 13px;
                     color: #55584f;
-                    line-height: 23px;
+                    line-height: 27px;
                     vertical-align: top;
                     font-weight: 300;
                     &.-tit {
@@ -212,12 +191,11 @@
         }
 
         &__work {
-            padding-top: 100px;
-            margin-bottom: 50px;
             .more {
                 text-align: center;
+                display: none;
                 &Btn {
-                    width: 28%;
+                    width: 50%;
                     max-width: 280px;
                     padding: 10px 0;
                     background: rgba(#8d93a1,0.7);
@@ -271,12 +249,6 @@
             display: block;
             padding-bottom: 60px;
             .items {
-                .item:nth-of-type(7) {
-                    display: none;
-                }
-                .item:nth-of-type(8) {
-                    display: none;
-                }
                 .item:nth-of-type(9) {
                     display: none;
                 }
@@ -318,6 +290,9 @@
                         padding-bottom: 15px;
                         color: #8C8C8C;
                     }
+                    &__desc {
+                        margin-top: 5px;
+                    }
                     &:hover {
                         .item__tit {
                             color: #ff6570;
@@ -345,7 +320,6 @@
         }
         &__contact {
             background: #fff;
-            padding: 60px 0;
             &Tit {
                 width: 100px;
             }
@@ -380,7 +354,6 @@
         }
         &__skill {
             background: #f6f7f9;
-            padding: 60px 0;
             &s {
                 display: block;
                 &.-mt20 {
@@ -460,8 +433,13 @@
             background: #fff;
             a {
                 display: inline-block;
-                padding: 20px;
+                padding: 16px;
                 transition: none;
+            }
+            .hyunju__gnb--list {
+                &.on {
+                    color: #ff6570;
+                }
             }
         }
         &__wrap {
@@ -469,6 +447,7 @@
         }
         &__title {
             display: block;
+            font-size: 34px;
         }
         &__titleWeb {
             display: none;
@@ -481,7 +460,6 @@
         }
         &__titBox {
             padding-left: 0;
-            padding-top: 240px;
         }
         .center {
             width: auto;
@@ -514,7 +492,16 @@
             }
         }
         .itemBox {
+            .more {
+                display: block;
+            }
             .items {
+                .item:nth-of-type(7) {
+                    display: none;
+                }
+                .item:nth-of-type(8) {
+                    display: none;
+                }
                 .item {
                     display: inline-block;
                     width: 31.5%;
@@ -524,9 +511,6 @@
                     overflow: hidden;
                 }
             }
-        }
-        &__title {
-            font-size: 40px;
         }
         &__contact {
             &Mq {
@@ -555,21 +539,20 @@
             text-align: center;
         }
         &__title {
-            font-size: 36px;
+            font-size: 22px;
             color: #ff6570;
             font-weight: 400;
         }
         &__titBox {
             display: inline-block;
             text-align: center;
-            padding-top: 300px;
             padding-left: 0;
         }
         &__desc{
-            font-size: 22px;
+            font-size: 18px;
             &.-addTxt {
                 margin-top: 17px;
-                font-size: 18px;
+                font-size: 17px;
             }
         }
         .itemBox {
@@ -584,8 +567,11 @@
                 }
             }
         }
+        .profile {
+            width: 100%;
+        }
         &__aboutBox {
-            height: 850px;
+            height: auto;
         }
         .center {
             width: auto;
@@ -618,25 +604,49 @@
 }
 @media screen and (max-width: 480px){
     .hyunju {
+        .secTop {
+            padding: 50px 0;
+        }
+        &__Mgnb a {
+            display: inline-block;
+            padding: 12px;
+            -webkit-transition: none;
+            transition: none;
+        }
+        &__contactMq {
+            padding: 0;
+        }
         &__title {
-            font-size: 28px;
+            font-size: 18px;
         }
         &__desc {
-            font-size: 20px;
+            font-size: 15px;
             &.-addTxt {
                 font-size: 15px;
             }
         }
-        &__titBox {
-            padding-top: 210px;
+        &__addTxt {
+            font-size: 15px;
         }
         &__aboutBox {
-            height: 920px;
             padding: 70px 30px;
+            &--left {
+                float: none;
+            }
+            &--right {
+                margin-top: 0;
+                float: none;
+            }
         }
         .itemBox {
             .items {
                 width: 100%;
+                .item:nth-of-type(5) {
+                    display: none;
+                }
+                .item:nth-of-type(6) {
+                    display: none;
+                }
                 .item {
                     display: block;
                     width: 97%;
@@ -667,6 +677,7 @@
         &__contactMap {
             img {
                 width: 100%;
+                padding: 20px;
             }
         }
         &__contactDetail {
