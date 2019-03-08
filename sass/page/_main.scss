@@ -1,406 +1,494 @@
 @charset "UTF-8";
 
-    .hyunju {
-        position: relative;
-        *::selection {
-            background: #ff6570;
-            color: #fff;
+.hyunju {
+    position: relative;
+    *::selection {
+        background: #ff6570;
+        color: #fff;
+    }
+    .secTop {
+        padding: 100px 0;
+    }
+    &__wrap {
+        width: 1100px;
+        margin: 0 auto;
+    }
+    &__mLogo {
+        display: block;
+        margin-bottom: 30px;
+        img {
+            width: 20px;
         }
-        .secTop {
-            padding: 110px 0;
+    }
+    &__bg {
+        text-align: center;
+    }
+    .active {
+        color: #ff6570;
+    }
+    .hyunju__gnb--list {
+        &.on {
+            color: #ff6570;
         }
-        &__wrap {
-            width: 1100px;
-            margin: 0 auto;
-        }
-        &__mLogo {
-            display: block;
-            margin-bottom: 30px;
-            img {
-                width: 20px;
-            }
-        }
-        &__bg {
-            text-align: center;
+    }
+    &__Mgnb {
+        position: fixed;
+        width: 100%;
+        display: block;
+        text-align: center;
+        z-index: 100;
+        border-bottom: 1px solid #e0e0e0;
+        background: #fff;
+        a {
+            display: inline-block;
+            padding: 20px;
+            transition: none;
         }
         .hyunju__gnb--list {
+            font-size: 14px;
             &.on {
                 color: #ff6570;
             }
         }
-        &__Mgnb {
-            position: fixed;
+    }
+    &__main {
+        background: url("/images/bg_main.jpg") no-repeat fixed center center;
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+        //페이지로드시 Fade In 효과주는 것
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        -webkit-animation: fadein 2s;
+        -o-animation: fadein 2s;
+        overflow: hidden;
+    }
+    @keyframes fadein {
+        from {
+            opacity:0.1;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-moz-keyframes fadein {
+        from {
+            opacity:0.1;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-webkit-keyframes fadein {
+        from {
+            opacity:0.1;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-o-keyframes fadein {
+        from {
+            opacity:0.1;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    &__titBox {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__title {
+        font-size: 50px;
+        font-weight: 700;
+        display: block;
+        color: #fff;
+        opacity: 0;
+        ::selection {
+            background: #ff6570;
+            color: #ffffff;
+        }
+        .name {
+            font-weight: 700;
+            font-family: 'Pacifico', cursive;
+        }
+    }
+    &__title {
+        font-size: 44px;
+        color: #ff6570;
+        font-weight: 400;
+    }
+    &__desc {
+        font-size: 22px;
+        font-weight: 300;
+        font-family:'Handlee', cursive;
+        color: #5f5b5a;
+        opacity: 0;
+    }
+    &__addTxt {
+        margin-top: 36px;
+        font-size: 18px;
+        font-weight: 300;
+        font-family:'Handlee', cursive;
+        color: #5f5b5a;
+        opacity: 0;
+    }
+
+    &__about {
+        display: block;
+        &--left {
+            display: inline-block;
             width: 100%;
-            display: block;
-            text-align: center;
-            z-index: 100;
-            border-bottom: 1px solid #e0e0e0;
-            background: #fff;
-            a {
+        }
+        &Box {
+            background: #f6f7f9;
+            padding: 40px 0 60px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .history {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            &__logo {
+                background: url("/images/icon_sun.png") center center;
+                width: 88px;
+                height: 89px;
                 display: inline-block;
-                padding: 20px;
-                transition: none;
+                position: absolute;
+                left: 45.5%;
+                top: 0;
             }
-            .hyunju__gnb--list {
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 8px;
+                background: #aacfd0;
+                left: 50%;
+                margin-left: -11px;
+                top: 28px;
+                bottom: 0;
+                border-radius: 30px;
+            }
+            &__date {
+                font-weight: 700;
                 font-size: 14px;
-                &.on {
-                    color: #ff6570;
+                line-height: 20px;
+            }
+            &__list {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 20px;
+                color: #222222;
+            }
+            &__year {
+                position: relative;
+                &::before {
+                    content: url("/images/icon_clude.png");
+                    position: absolute;
+                }
+            }
+            &__text {
+                margin-top: 20px;
+            }
+            &__item {
+                clear: both;
+                font-size: 13px;
+                padding: 15px 0;
+                &.-right {
+                    float: right;
+                    text-align: left;
+                    position: relative;
+                    width: 100%;
+                    padding-left: 54%;
+                    .history__year {
+                        &::before {
+                            left: -28px;
+                            bottom: -1px;
+                        }
+                    }
+                }
+                &.-left {
+                    float: left;
+                    text-align: right;
+                    position: relative;
+                    width: 100%;
+                    padding-right: 55%;
+                    .history__year {
+                        &::before {
+                            right: -30px;
+                            bottom: -1px;
+                        }
+                    }
+                }
+                &.-pb30 {
+                    padding-bottom: 30px;
+                }
+                &.-pt140 {
+                    padding-top: 140px;
                 }
             }
         }
-        &__main {
-            background: url("/images/bg_main.jpg") no-repeat fixed center center;
-            background-size: cover;
-            height: 100vh;
-            position: relative;
-            //페이지로드시 Fade In 효과주는 것
-            animation: fadein 2s;
-            -moz-animation: fadein 2s;
-            -webkit-animation: fadein 2s;
-            -o-animation: fadein 2s;
-            overflow: hidden;
-        }
-        @keyframes fadein {
-            from {
-                opacity:0.1;
-            }
-            to {
-                opacity:1;
-            }
-        }
-        @-moz-keyframes fadein {
-            from {
-                opacity:0.1;
-            }
-            to {
-                opacity:1;
-            }
-        }
-        @-webkit-keyframes fadein {
-            from {
-                opacity:0.1;
-            }
-            to {
-                opacity:1;
-            }
-        }
-        @-o-keyframes fadein {
-            from {
-                opacity:0.1;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        &__titBox {
+        .contact {
             text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-        }
-        &__title {
-            font-size: 50px;
-            font-weight: 700;
-            display: block;
-            color: #fff;
-            opacity: 0;
-            ::selection {
-                background: #ff6570;
-                color: #ffffff;
-            }
-            .name {
-                font-weight: 700;
+            &__title {
+                font-size: 17px;
+                margin-bottom: 20px;
                 font-family: 'Pacifico', cursive;
+                color: #3A4763;
+            }
+            &__list {
+                font-size: 12px;
+                line-height: 20px;
+                display: block;
+                vertical-align: middle;
+                img {
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+            }
+            &__logo {
+                background: url("/images/icon_home.png") center center;
+                width: 150px;
+                height: 150px;
+                display: inline-block;
             }
         }
-        &__title {
-            font-size: 44px;
-            color: #ff6570;
-            font-weight: 400;
+    }
+
+    &__work {
+        .more {
+            text-align: center;
+            display: none;
+            &Btn {
+                width: 50%;
+                max-width: 280px;
+                padding: 10px 0;
+                background: rgba(#8d93a1,0.7);
+                text-align: center;
+                cursor: pointer;
+                color: #fff;
+                display: inline-block;
+                transition: all 0.3s;
+                &.close {
+                    display: none;
+                }
+                &:hover {
+                    background: #8d93a1;
+                }
+            }
+        }
+    }
+
+    //common
+
+    .titBox {
+        position: relative;
+        padding-bottom: 60px;
+        &:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            background: #394762;
+            width: 6px;
+            height: 63px;
         }
         &__desc {
-            font-size: 22px;
+            margin-left: 27px;
+            font-size: 13px;
+            color: #8C8C8C;
             font-weight: 300;
-            font-family:'Handlee', cursive;
-            color: #5f5b5a;
-            opacity: 0;
+            padding-top: 8px;
         }
-        &__addTxt {
-            margin-top: 36px;
-            font-size: 18px;
-            font-weight: 300;
-            font-family:'Handlee', cursive;
-            color: #5f5b5a;
-            opacity: 0;
+        &__title {
+            margin-left: 27px;
+            font-size: 34px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #3A4763;
+            display: inline-block;
         }
+    }
 
-        &__about {
-            display: block;
-            &--left {
-                display: inline-block;
-                width: 100%;
-            }
-            &Box {
-                background: #f6f7f9;
-                padding: 70px 60px;
-                overflow: hidden;
-                height: 520px;
-                box-sizing: border-box;
-                .date {
-                    font-weight: 400;
-                }
-                &--tit {
-                    font-size: 26px;
-                    color: #44494d;
-                }
-                &--txt {
-                    margin-bottom: 27px;
-                    padding: 0 10px 12px;
-                    font-size: 13px;
-                    color: #55584f;
-                    line-height: 27px;
-                    vertical-align: top;
-                    font-weight: 300;
-                    &.-tit {
-                        font-weight: 700;
-                        padding: 0 10px 0 0;
-                        font-size: 15px;
-                    }
-                }
-                &--left {
-                    float: left;
-                    width: 50%;
-                    margin-top: 45px;
-                }
-                &--right {
-                    float: right;
-                    width: 50%;
-                    text-align: center;
-                    margin-top: 20px;
-                    .profile {
-                        border-radius: 50%;
-                        width: 320px;
-                        border: 5px solid #fff;
-                    }
-                    &.-mq {
-                        display: none;
-                    }
-                }
-            }
-        }
-
-        &__work {
-            .more {
-                text-align: center;
+    .itemBox {
+        display: block;
+        padding-bottom: 60px;
+        .items {
+            .item:nth-of-type(9) {
                 display: none;
-                &Btn {
-                    width: 50%;
-                    max-width: 280px;
-                    padding: 10px 0;
-                    background: rgba(#8d93a1,0.7);
-                    text-align: center;
-                    cursor: pointer;
-                    color: #fff;
-                    display: inline-block;
+            }
+            .item:nth-of-type(10) {
+                display: none;
+            }
+            .item:nth-of-type(11) {
+                display: none;
+            }
+            .item:nth-of-type(12) {
+                display: none;
+            }
+            .item {
+                display: inline-block;
+                width: 23%;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                border: 1px solid rgba(#343434, 0.1);
+                overflow: hidden;
+                //더보기 버튼 누르기 전까지는 컨텐츠물 가리기
+                &__img {
+                    width: 100%;
                     transition: all 0.3s;
-                    &.close {
-                        display: none;
+                }
+                &__imgWrap {
+                    width: auto;
+                    height: auto;
+                    overflow: hidden;
+                }
+                &__tit {
+                    font-size: 15px;
+                    transition: all 0.2s;
+                    color: #555555;
+                    margin-bottom: 10px;
+                }
+                &__text {
+                    margin-top: 10px;
+                    font-size: 12px;
+                    padding-left: 15px;
+                    padding-bottom: 15px;
+                    color: #8C8C8C;
+                }
+                &__desc {
+                    margin-top: 5px;
+                }
+                &:hover {
+                    .item__tit {
+                        color: #ff6570;
                     }
-                    &:hover {
-                        background: #8d93a1;
+                    img {
+                        transform: scale(1.1);
+                        opacity: 0.8;
                     }
                 }
             }
         }
-
-        //common
-
-        .titBox {
+        .more {
+            margin-top: 30px;
+        }
+    }
+    &__footer {
+        padding: 20px;
+        background: #394762;
+        text-align: center;
+        &--text {
+            color: #fff;
+            font-size: 12px;
+            line-height: 2;
+            &.-line {
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 10px;
+                    margin: -1px 8px;
+                    background: #fff;
+                }
+            }
+            a {
+                color: #fff;
+            }
+        }
+    }
+    &__contact {
+        background: #fff;
+        &Tit {
+            width: 100px;
+        }
+        &--txt {
+            font-size: 14px;
+            color: #55584f;
+            line-height: 25px;
+        }
+        &Map {
+            display: inline-block;
+        }
+        &Detail {
+            font-size: 13px;
+            vertical-align: top;
+            display: inline-block;
+            margin-left: 50px;
+            img {
+                vertical-align: middle;
+                margin-right: 15px;
+            }
+            .link {
+                color: #ff6570;
+                text-decoration: underline;
+            }
+            td {
+                padding: 8px 10px;
+            }
+            .nopd {
+                padding: 0 0 8px 10px;
+            }
+        }
+    }
+    &__skill {
+        background: #f6f7f9;
+        &s {
+            display: block;
+            &.-mt20 {
+                margin-top: 80px;
+                margin-left: 100px;
+            }
+        }
+        &--list {
+            display: inline-block;
+            vertical-align: top;
+            width: 33%;
+            text-align: center;
+            font-size: 13px;
+            color: #55584f;
+        }
+        &Txt {
+            font-size: 13px;
+            line-height: 21px;
             position: relative;
-            padding-bottom: 60px;
+            padding-left: 17px;
             &:before {
                 content: '';
                 display: inline-block;
                 position: absolute;
-                background: #394762;
-                width: 6px;
-                height: 67px;
-            }
-            &__desc {
-                margin-left: 27px;
-                font-size: 13px;
-                color: #8C8C8C;
-                font-weight: 300;
-            }
-            &__title {
-                margin-left: 27px;
-                font-size: 34px;
-                text-transform: uppercase;
-                font-weight: 700;
-                line-height: 1.33;
-                color: #3A4763;
-                display: inline-block;
-                background: linear-gradient(transparent 75%, #ff6570 60%);
-            }
-        }
-
-        .itemBox {
-            display: block;
-            padding-bottom: 60px;
-            .items {
-                .item:nth-of-type(9) {
-                    display: none;
-                }
-                .item:nth-of-type(10) {
-                    display: none;
-                }
-                .item:nth-of-type(11) {
-                    display: none;
-                }
-                .item:nth-of-type(12) {
-                    display: none;
-                }
-                .item {
-                    display: inline-block;
-                    width: 23%;
-                    margin-left: 10px;
-                    margin-bottom: 10px;
-                    border: 1px solid rgba(#343434, 0.1);
-                    overflow: hidden;
-                    //더보기 버튼 누르기 전까지는 컨텐츠물 가리기
-                    &__img {
-                        width: 100%;
-                        transition: all 0.3s;
-                    }
-                    &__imgWrap {
-                        width: auto;
-                        height: auto;
-                        overflow: hidden;
-                    }
-                    &__tit {
-                        font-size: 17px;
-                        transition: all 0.2s;
-                        color: #555555;
-                    }
-                    &__text {
-                        margin-top: 10px;
-                        font-size: 12px;
-                        padding-left: 15px;
-                        padding-bottom: 15px;
-                        color: #8C8C8C;
-                    }
-                    &__desc {
-                        margin-top: 5px;
-                    }
-                    &:hover {
-                        .item__tit {
-                            color: #ff6570;
-                        }
-                        img {
-                            transform: scale(1.1);
-                            opacity: 0.8;
-                        }
-                    }
-                }
-            }
-            .more {
-                margin-top: 30px;
-            }
-        }
-        &__footer {
-            padding: 20px;
-            background: #394762;
-            text-align: center;
-            &--text {
-                color: #fff;
-                font-size: 12px;
-                line-height: 2;
-            }
-        }
-        &__contact {
-            background: #fff;
-            &Tit {
-                width: 100px;
-            }
-            &--txt {
-                font-size: 14px;
-                color: #55584f;
-                line-height: 25px;
-            }
-            &Map {
-                display: inline-block;
-            }
-            &Detail {
-                font-size: 13px;
-                vertical-align: top;
-                display: inline-block;
-                margin-left: 50px;
-                img {
-                    vertical-align: middle;
-                    margin-right: 15px;
-                }
-                .link {
-                    color: #ff6570;
-                    text-decoration: underline;
-                }
-                td {
-                    padding: 8px 10px;
-                }
-                .nopd {
-                    padding: 0 0 8px 10px;
-                }
-            }
-        }
-        &__skill {
-            background: #f6f7f9;
-            &s {
-                display: block;
-                &.-mt20 {
-                    margin-top: 80px;
-                    margin-left: 100px;
-                }
-            }
-            &--list {
-                display: inline-block;
-                vertical-align: top;
-                width: 33%;
-                text-align: center;
-                font-size: 14px;
-                color: #55584f;
-            }
-            &Txt {
-                font-size: 14px;
-                line-height: 21px;
-                position: relative;
-                padding-left: 17px;
-                &:before {
-                    content: '';
-                    display: inline-block;
-                    position: absolute;
-                    width: 3px;
-                    height: 3px;
-                    background: #ff6570;
-                    left: 3px;
-                    top: 9px;
-                }
-            }
-        }
-        &__skillList {
-            margin-top: 20px;
-        }
-        &__skillTit {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            &.-ex {
-                font-size: 20px;
-                font-weight: 700;
-                margin-bottom: 10px;
-                color: #55584f;
+                width: 3px;
+                height: 3px;
+                background: #ff6570;
+                left: 3px;
+                top: 9px;
             }
         }
     }
+    &__skillList {
+        margin-top: 20px;
+        dd {
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+    }
+    &__skillTit {
+        font-size: 15px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        &.-ex {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #55584f;
+        }
+    }
+}
 
 // TOP버튼
 .up {
@@ -473,7 +561,6 @@
             padding-left: 40px;
         }
         &__aboutBox {
-            height: 850px;
             &--tit {
                 text-align: center;
             }
@@ -567,11 +654,21 @@
                 }
             }
         }
-        .profile {
-            width: 100%;
-        }
         &__aboutBox {
             height: auto;
+            .history {
+                &__logo {
+                    left: 41.5%;
+                }
+                &__item {
+                    &.-left {
+                        padding-right: 57%;
+                    }
+                    &.-right {
+                        padding-left: 55%;
+                    }
+                }
+            }
         }
         .center {
             width: auto;
@@ -581,10 +678,6 @@
         &__skills.-mt20 {
             margin-top: 45px;
             margin-left: 58px;
-        }
-        &__contactMap {
-            display: block;
-            text-align: center;
         }
         &__contactDetail {
             margin-left: 0;
@@ -629,13 +722,19 @@
             font-size: 15px;
         }
         &__aboutBox {
-            padding: 70px 30px;
-            &--left {
-                float: none;
-            }
-            &--right {
-                margin-top: 0;
-                float: none;
+            padding: 30px 10px;
+            .history {
+                &__logo {
+                    left: 37%;
+                }
+                &__item {
+                    &.-left {
+                        padding-right: 65%;
+                    }
+                    &.-right {
+                        padding-left: 60%;
+                    }
+                }
             }
         }
         .itemBox {
@@ -673,16 +772,6 @@
         &__skill--list {
             width: 100%;
             margin: 50px 0;
-        }
-        &__contactMap {
-            img {
-                width: 100%;
-                padding: 20px;
-            }
-        }
-        &__contactDetail {
-            margin-left: -10px;
-            margin-top: 55px;
         }
     }
 }
